@@ -34,17 +34,30 @@ class App extends Component {
   updateChoice=(quesId, optValue) => {
     console.log('here');
     const currChoices = this.state.choices;
+    let flag = false;
     for (let i = 0; i < currChoices.length; i += 1) {
       if (currChoices[i].questionId === quesId) {
         currChoices[i].choice = optValue;
+        flag = true;
         break;
       }
+    }
+    if (flag === false) {
+      currChoices.push({ questionId: quesId, choice: optValue });
     }
     this.setState({ choices: currChoices });
   }
 
 saveScore=(score) => {
   this.setState({ latestScore: score, page: 'scoreboard' });
+  const options = {
+    method: 'post',
+    body: JSON.stringify({
+      username: this.state.username,
+      latestScore: score,
+    }),
+  };
+  fetch('/saveScore', options).then(response => response.text()).then(console.log);
 }
 
 

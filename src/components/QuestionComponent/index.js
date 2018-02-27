@@ -11,13 +11,13 @@ class QuestionComponent extends React.Component {
   }
 
   selectButton=(optionValue) => {
-    console.log(optionValue);
+    // console.log(optionValue);
     // this.setState({ selected: optionValue });
     this.props.saveToDb(this.props.questionId, optionValue);
   }
 
   render() {
-    console.log(':::::', this.props);
+    // console.log(':::::', this.props);
     const optsElements = [];
     this.props.options.forEach((element) => {
       optsElements.push(<OptionsComponent option={element} isSelected={this.props.selectedOption === element} selectButton={this.selectButton} />);

@@ -51,8 +51,8 @@ saveToDb = (quesID, selectedOptionValue) => {
       choice: selectedOptionValue,
     }),
   };
-  fetch('/saveChoice', config).then(response => response.text()).then(() => {
-    console.log('sd');
+  fetch('/saveChoice', config).then(response => response.text()).then((response) => {
+    console.log(response);
   });
 }
 
@@ -60,8 +60,8 @@ saveToDb = (quesID, selectedOptionValue) => {
 calculateScore=() => {
   let score = 0;
   this.state.choices.forEach((choiceObj) => {
-    console.log(this.state.corrects);
-    console.log(this.state.corrects[choiceObj.questionId], choiceObj.choice);
+    // console.log(this.state.corrects);
+    // console.log(this.state.corrects[choiceObj.questionId], choiceObj.choice);
     if (this.state.corrects[choiceObj.questionId] === choiceObj.choice) {
       score += 1;
     }
@@ -77,9 +77,9 @@ render() {
   if (this.state.loaded === true) {
     this.state.allQues.forEach((question) => {
       let selectedChoice = '';
-      for (let i = 0; i < this.state.choices.length; i += 1) {
-        if (this.state.choices[i].questionId === question.questionId) {
-          selectedChoice = this.state.choices[i].choice;
+      for (let i = 0; i < this.props.choices.length; i += 1) {
+        if (this.props.choices[i].questionId === question.questionId) {
+          selectedChoice = this.props.choices[i].choice;
           break;
         }
       }
@@ -102,7 +102,7 @@ render() {
     <div>
       <div>QuizPage</div>
       <div>{quesArray}</div>
-      <button type="button" onClick={() => { this.calculateScore(); }}>Calculate Score</button>
+      <button type="button" disabled={Object.keys(this.state.corrects).length !== (this.state.choices.length)} onClick={() => { this.calculateScore(); }}>Calculate Score</button>
     </div>
   );
 }
