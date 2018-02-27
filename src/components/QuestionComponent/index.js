@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import OptionsComponent from '../OptionsComponent';
+import './questionComponent.css';
 
 class QuestionComponent extends React.Component {
   constructor(props) {
@@ -23,11 +24,10 @@ class QuestionComponent extends React.Component {
       optsElements.push(<OptionsComponent key={element + this.props.questionId} option={element} isSelected={this.props.selectedOption === element} selectButton={this.selectButton} />);
     });
     return (
-      <div>
-        {this.props.questionID}
-        {this.props.question}<br />
-        {this.props.answer}<br />
-        {optsElements}
+      <div className="question-container">
+        <div className="question-number">{`Question ${this.props.quesNo}`}</div>
+        <div className="question">{this.props.question}</div>
+        <div className="opts-container"> {optsElements}</div>
       </div>);
   }
 }

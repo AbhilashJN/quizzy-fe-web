@@ -1,0 +1,43 @@
+.quiz-page{
+    /* background-color:red; */
+    display:flex;
+    flex-direction: column;
+    /* height:100vw; */
+    justify-content: flex-start;
+    align-content: center;
+    padding:5%;
+
+}
+
+.quiz-header{
+    background-color:black;
+    color:white;
+    display:flex;
+    flex-direction: row;
+    height:3.5%;
+    padding:1vh 2vw;
+    justify-content: space-between;
+    align-items: center;
+    font-size:30px;
+    font-family:'HelveticaNeue-CondensedBold';
+}
+
+.questions-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow:1;
+    height:100%;
+    justify-content: space-between
+}
+
+
+
+.calc-btn{
+    width:10%;
+    margin:auto;
+    height:3.5%;
+    border:2px solid black;
+    font-size:20px;
+    border-radius:20px
+}

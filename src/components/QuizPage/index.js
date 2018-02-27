@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import QuestionComponent from '../QuestionComponent';
+import './quizPage.css';
 
 class QuizPage extends React.Component {
   constructor(props) {
@@ -75,7 +76,7 @@ render() {
   const quesArray = [];
   const correctAns = {};
   if (this.state.loaded === true) {
-    this.state.allQues.forEach((question) => {
+    this.state.allQues.forEach((question, index) => {
       let selectedChoice = '';
       for (let i = 0; i < this.props.choices.length; i += 1) {
         if (this.props.choices[i].questionId === question.questionId) {
@@ -84,6 +85,7 @@ render() {
         }
       }
       quesArray.push(<QuestionComponent
+        quesNo={index + 1}
         key={question.questionId}
         questionId={question.questionId}
         question={question.question}
@@ -100,9 +102,13 @@ render() {
   //   console.log(quesArray);
   return (
     <div className="quiz-page">
-      <div className="">QuizPage</div>
-      <div>{quesArray}</div>
-      <button type="button" disabled={Object.keys(this.state.corrects).length !== (this.state.choices.length)} onClick={() => { this.calculateScore(); }}>Calculate Score</button>
+      <div className="quiz-header">
+        <span> Quizzy</span>
+        <span> Hello {this.props.username}</span>
+      </div>
+      <div className="questions-container">{quesArray}</div>
+      <button className="calc-btn" type="button" disabled={Object.keys(this.state.corrects).length !== (this.state.choices.length)} onClick={() => { this.calculateScore(); }}>Calculate</button>
+
     </div>
   );
 }
