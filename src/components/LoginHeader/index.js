@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import './loginHeader.css';
 class LoginHeader extends React.Component {
   render() {
-    return <div>Quizzy</div>;
+    return <div className="login-header">Quizzy</div>;
   }
 }
 LoginHeader.defaultProps = {

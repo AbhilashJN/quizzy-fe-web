@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './loginField.css';
 
 class LoginField extends React.Component {
   constructor(props) {
@@ -10,9 +11,10 @@ class LoginField extends React.Component {
   }
   render() {
     return (
-      <div>
-        <input type="text" placeholder="login" onChange={(e) => { this.setState({ username: e.target.value }); }} />
-        <button type="button" onClick={() => { this.props.doLogin(this.state.username); }}>Login</button>
+      <div className="login-field">
+        <p className="label-login">Username</p>
+        <input className="login-input" type="text" onChange={(e) => { this.setState({ username: e.target.value }); }} />
+        <button className="login-btn" type="button" onClick={() => { if (this.state.username.length < 2) { alert('Enter proper user name'); return; } this.props.doLogin(this.state.username); }}>Login</button>
       </div>);
   }
 }

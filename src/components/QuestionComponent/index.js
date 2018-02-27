@@ -20,7 +20,7 @@ class QuestionComponent extends React.Component {
     // console.log(':::::', this.props);
     const optsElements = [];
     this.props.options.forEach((element) => {
-      optsElements.push(<OptionsComponent option={element} isSelected={this.props.selectedOption === element} selectButton={this.selectButton} />);
+      optsElements.push(<OptionsComponent key={element + this.props.questionId} option={element} isSelected={this.props.selectedOption === element} selectButton={this.selectButton} />);
     });
     return (
       <div>

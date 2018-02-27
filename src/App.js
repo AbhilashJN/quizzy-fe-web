@@ -60,6 +60,15 @@ saveScore=(score) => {
   fetch('/saveScore', options).then(response => response.text()).then(console.log);
 }
 
+resetGame=() => {
+  this.setState({
+    page: 'login',
+    username: null,
+    latestScore: 0,
+    choices: [],
+  });
+}
+
 
 render() {
   console.log('::::::::::::', this.state);
@@ -76,7 +85,7 @@ render() {
         saveScore={this.saveScore}
       />);
   } else {
-    currentComp = <ScoreBoard score={this.state.latestScore} username={this.state.username} />;
+    currentComp = <ScoreBoard score={this.state.latestScore} username={this.state.username} resetGame={this.resetGame} />;
   }
   return (
     <div>

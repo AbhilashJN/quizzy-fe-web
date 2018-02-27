@@ -96,11 +96,11 @@ render() {
       correctAns[question.questionId] = question.answer;
     });
   }
-  console.log(this.state.allQues);
-  console.log(quesArray);
+  //   console.log(this.state.allQues);
+  //   console.log(quesArray);
   return (
-    <div>
-      <div>QuizPage</div>
+    <div className="quiz-page">
+      <div className="">QuizPage</div>
       <div>{quesArray}</div>
       <button type="button" disabled={Object.keys(this.state.corrects).length !== (this.state.choices.length)} onClick={() => { this.calculateScore(); }}>Calculate Score</button>
     </div>

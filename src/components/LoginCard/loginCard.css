@@ -1,0 +1,42 @@
+.login-card{
+    background-color:yellow;
+    height:55%;
+    display:flex;
+    flex-direction:row;
+    width:45%
+}
+
+
+.left-column{
+    background-color:#6CC5F0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    font-size:40px;
+    font-family: 'HelveticaNeue-CondensedBold'
+}
+
+.right-column{
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:50%;
+}
+
+.white{
+    color:white
+}
+
+.card-title{
+    display:flex;
+    flex-direction: row;
+    width:80%;
+    font-family:'HelveticaNeue-CondensedBold';
+    justify-content: flex-start;
+    font-size:30px;
+    margin:10%;
+}
