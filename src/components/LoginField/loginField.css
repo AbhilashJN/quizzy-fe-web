@@ -14,7 +14,7 @@
     width:80%;
     justify-content: flex-start;
     font-family: 'HelveticaNeue-CondensedBold';
-    font-size:25px;
+    font-size:1.8em;
     margin:2% 5%
 }
 .login-input{
@@ -36,3 +36,16 @@
     font-size :25px;
     font-family: 'HelveticaNeue-CondensedBold';
 }
+
+
+@media screen and (max-width:400px){
+    .login-input{
+        width:50%
+    }
+    .label-login{
+        font-size:1em
+    }
+    .login-btn{
+        font-size:1em
+    }
+  }

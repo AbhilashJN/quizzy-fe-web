@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     width:50%;
-    font-size:40px;
+    font-size:2em;
     font-family: 'HelveticaNeue-CondensedBold'
 }
 
@@ -27,8 +27,9 @@
     width:50%;
 }
 
-.white{
-    color:white
+.quizzy{
+    color:white;
+    font-size:2.2em
 }
 
 .card-title{
@@ -37,6 +38,22 @@
     width:80%;
     font-family:'HelveticaNeue-CondensedBold';
     justify-content: flex-start;
-    font-size:30px;
-    margin:10%;
+    font-size:1.75em;
+    margin:15%;
 }
+  @media screen and (max-width:400px){
+    .quizzy{
+        color:white;
+        font-size:1.5em
+    }
+ 
+  }
+
+  @media screen and (max-width:850px){
+    .left-column{
+        font-size:1em
+    }
+ 
+  }
+
+ 

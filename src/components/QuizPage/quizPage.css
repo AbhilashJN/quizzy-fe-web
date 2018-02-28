@@ -39,5 +39,14 @@
     height:70px;
     border:2px solid black;
     font-size:20px;
-    border-radius:20px
+    border-radius:20px;
+    font-family: 'HelveticaNeue-CondensedBold'
 }
+
+
+@media screen and (max-width:600px){
+    .calc-btn{
+        font-size:0.75em
+    }
+ 
+  }

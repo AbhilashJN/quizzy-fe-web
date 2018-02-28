@@ -8,7 +8,7 @@ class LoginCard extends React.Component {
     return (
       <div className="login-card">
         <div className="left-column">
-          <span>Welcome</span> <span>to</span><span className="white"> Quizzy!</span>
+          <span>Welcome</span> <span>to</span><span className="quizzy"> Quizzy!</span>
         </div>
         <div className="right-column">
           <p className="card-title">Login</p>

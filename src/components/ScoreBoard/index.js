@@ -33,7 +33,10 @@ class ScoreBoard extends React.Component {
         <p className="your-score-text">Your score</p>
         <p className="your-score-score"><span className="current-score">{this.props.score}</span>/{this.props.maxScore}</p>
         <div className="score-main-row">
-          <div className="leader-board">{scoreRowsArray}</div>
+          <div className="leader-board">
+            <p>Leaderboard</p>
+            {scoreRowsArray}
+          </div>
         </div>
         <button className="play-again-btn" type="button" onClick={() => { this.props.resetGame(); }}>Play Again</button>
       </div>
