@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'score',
+      page: 'login',
       username: null,
       latestScore: 0,
       choices: [],
