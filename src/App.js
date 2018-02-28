@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'login',
+      page: 'score',
       username: null,
       latestScore: 0,
       choices: [],
@@ -85,7 +85,7 @@ render() {
         saveScore={this.saveScore}
       />);
   } else {
-    currentComp = <ScoreBoard score={this.state.latestScore} username={this.state.username} resetGame={this.resetGame} />;
+    currentComp = <ScoreBoard score={this.state.latestScore} username={this.state.username} resetGame={this.resetGame} maxScore={this.state.choices.length} />;
   }
   return (
     <div>

@@ -1,0 +1,21 @@
+
+
+
+.score-row{
+    display:flex;
+    flex-direction: row;
+    border:2px solid black;
+    background-color:#56BAE1;
+    color:white;
+    margin: 2%;
+    font-size:1.7em;
+    padding:2%;
+    font-family: 'HelveticaNeue-CondensedBold';
+    justify-content: space-between
+}
+
+
+.score-row-rank{
+    color:black
+}
+

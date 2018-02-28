@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ScoreRow from '../ScoreRow';
+import './scoreBoard.css';
 
 class ScoreBoard extends React.Component {
   constructor(props) {
@@ -24,10 +25,17 @@ class ScoreBoard extends React.Component {
       });
     }
     return (
-      <div >
-        {`${this.props.username}'s score: ${this.props.score}`}
-        {scoreRowsArray}
-        <button type="button" onClick={() => { this.props.resetGame(); }}>Play Again</button>
+      <div className="score-page">
+        <div className="quiz-header">
+          <span> Quizzy</span>
+          <span> Hello {this.props.username}</span>
+        </div>
+        <p className="your-score-text">Your score</p>
+        <p className="your-score-score"><span className="current-score">{this.props.score}</span>/{this.props.maxScore}</p>
+        <div className="score-main-row">
+          <div className="leader-board">{scoreRowsArray}</div>
+        </div>
+        <button className="play-again-btn" type="button" onClick={() => { this.props.resetGame(); }}>Play Again</button>
       </div>
     );
   }

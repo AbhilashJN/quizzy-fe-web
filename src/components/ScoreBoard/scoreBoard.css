@@ -1,0 +1,64 @@
+.score-page{
+     /* background-color:red; */
+     display:flex;
+     flex-direction: column;
+     /* height:100vw; */
+     padding-bottom:5%;
+    background-color:pink;
+}
+
+
+.your-score-text{
+    display: flex;
+    flex-direction:row;
+    
+    color:orange;
+    background-color:green;
+    font-family: 'HelveticaNeue-CondensedBold';
+    font-size:1.5em;
+    padding-left:5%;
+    margin-bottom:0px
+}
+
+
+.your-score-score{
+    display: flex;
+    flex-direction:row;
+    align-items:baseline;
+    background-color:grey;
+    margin-top:0px;
+    padding-left:5%;
+    font-size: 2em;
+    font-family: 'HelveticaNeue-CondensedBold';
+}
+
+.current-score{
+    font-size:200%;
+    font-family:'HelveticaNeue-Thin'
+}
+
+.play-again-btn{
+    width:15%;
+    margin:auto;
+    height:70px;
+    border:2px solid black;
+    font-size:20px;
+    border-radius:20px;
+    font-family: 'HelveticaNeue-CondensedBold'
+}
+
+.leader-board{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    width:60%;
+    margin-bottom:5%
+}
+
+.score-main-row{
+    background-color:orange;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center
+}

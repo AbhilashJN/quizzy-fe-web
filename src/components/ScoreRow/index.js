@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './scoreRow.css';
 
 class ScoreRow extends React.Component {
   render() {
     return (
-      <div>
-        {this.props.rank}
-        {this.props.username}
-        {this.props.score}
+      <div className="score-row">
+        <div >
+          <span className="score-row-rank">{`${this.props.rank}. `}</span>
+          {this.props.username}
+        </div>
+        <div>
+          {this.props.score}
+        </div>
       </div>
     );
   }
